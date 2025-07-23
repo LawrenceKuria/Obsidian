@@ -53,3 +53,6 @@ class Solution:
 - After sorting, we create a for loop starting from the second element ranging the length of the `intervals` list.
 - We initialize the `res` array to store the merged intervals and set `current_start` and `current_end` to the start and end values respectively of the first interval in `intervals`.
 - In our for loop we set `next_start` and `next_end` to the start and end values respectively in  the i'th interval in `intervals`.
+- We then check if `next_start <= current_end` and if so, we set `current_end` to the max of `current_end` and `next_end` because this means the next interval was a part of the current interval.
+- If the condition is not met then the interval is independent and we can just add the current interval to the `res` array then set the current interval to the next interval and continue the loop.
+- At the end we append the current start and end values as the loop can finish without appending them and return our final answer, `res`
