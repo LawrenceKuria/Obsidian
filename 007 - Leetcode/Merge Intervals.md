@@ -48,3 +48,8 @@ class Solution:
 - Time complexity: `O(n)`
 - Space complexity: `O(n)`
 ## Explanation
+
+- We first start by sorting the `intervals` in ascending order by the start value of each interval of each  so we can merge in one pass.
+- After sorting, we create a for loop starting from the second element ranging the length of the `intervals` list.
+- We initialize the `res` array to store the merged intervals and set `current_start` and `current_end` to the start and end values respectively of the first interval in `intervals`.
+- In our for loop we set `next_start` and `next_end` to the start and end values respectively in  the i'th interval in `intervals`.
