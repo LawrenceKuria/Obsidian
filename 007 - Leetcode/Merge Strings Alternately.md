@@ -34,3 +34,7 @@ class Solution:
 - Space complexity: `O(n + m)`
 ## Explanation
 
+- To merge alternately we want to keep adding the characters of both strings one at a time until the shorter string runs out of characters and in that case, append the rest of the longer string.
+- To do this we initialize an empty string `ans` to store a merged string
+- We then create a for loop ranging the length of the smaller of the two words and append the character at the given index of `word1` then `word2` as per the instructions.
+- Once this finishes executing `ans` has stored the merged string up to the length of the shorter of the strings. Therefore we must append the rest of the longer string with the simple check shown above and return `ans`.
