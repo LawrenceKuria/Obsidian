@@ -32,4 +32,16 @@ class Solution:
 - Space complexity: `O(1)`
 ## Explanation
 
-- 
+- Check if the input list is empty — return `''` if so.
+    
+- Find the shortest string in the list (common prefix can't be longer than this).
+    
+- Loop through each character `i` in the shortest string:
+    
+    - For each word in the list, check if the character at index `i` matches.
+        
+    - If **any word differs**, return the prefix up to `i`.
+        
+- If the loop completes with no mismatches, the entire `shortest` string is the prefix.
+    
+- Return the final result. 
