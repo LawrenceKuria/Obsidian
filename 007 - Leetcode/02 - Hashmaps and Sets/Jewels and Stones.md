@@ -29,9 +29,35 @@ Letters are case sensitive, so `"a"` is considered a different type of stone f
 # Code
 
 ```python
+from collections import defaultdict
+class Solution:
+    def numJewelsInStones(self, jewels: str, stones: str) -> int:
+        total = defaultdict(int)
+        summ = 0
+        for letter in stones:
+            if letter in total:
+                total[letter] += 1
+            else:
+                total[letter] = 1
+        for i in jewels:
+                summ += total[i]
+        return summ
 ```
 ## Time and Space Complexity
 
-- Time complexity:
-- Space complexity:
+- Time complexity: `O(n)`
+- Space complexity: `O(n)`
 ## Explanation
+- Use a `defaultdict` to count how many times each stone appears.
+    
+- Loop through each letter in `stones`:
+    
+    - Increment its count in the `total` map.
+        
+- Initialize `summ = 0` to store how many jewels you have.
+    
+- Loop through each jewel in `jewels`:
+    
+    - Add its count from `total` to `summ`.
+        
+- Return the final count `summ` — the total number of jewels in your stones.
