@@ -1,2 +1,2 @@
 # Obsidian
-These are my obsidian notes
+These are my notes on all things CS related.

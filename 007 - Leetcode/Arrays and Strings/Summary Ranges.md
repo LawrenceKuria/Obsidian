@@ -67,3 +67,30 @@ class Solution:
 - Time complexity: `O(n)`
 - Space complexity: `O(n)`
 ## Explanation
+- If `nums` is empty, return an empty list.
+    
+- Use two pointers:
+    
+    - `start` marks the beginning of a range.
+        
+    - `end` moves through the array to find where the range ends.
+        
+- Loop while `end` is within bounds:
+    
+    - If `nums[end]` is **not consecutive** from `nums[end - 1]`:
+        
+        - If it's a single number, add just `nums[start]`.
+            
+        - Otherwise, add the range `"start->end-1"`.
+            
+        - Move `start` to `end`.
+            
+    - Always increment `end`.
+        
+- After the loop, handle the **last remaining range** the same way:
+    
+    - If it’s a single number, add it.
+        
+    - If it’s a range, format and add it.
+        
+- Return the result list of formatted ranges.

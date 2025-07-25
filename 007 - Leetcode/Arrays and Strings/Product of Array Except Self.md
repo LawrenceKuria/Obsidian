@@ -2,7 +2,7 @@
 
 Tags: #Leetcode 
 
-Status: #child 
+Status: #adult 
 
 **Description**: Given an integer array `nums`, return _an array_ `answer` _such that_ `answer[i]` _is equal to the product of all the elements of_ `nums` _except_ `nums[i]`.
 
