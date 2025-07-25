@@ -56,3 +56,22 @@ class Solution:
 - Time complexity: `O(n)`
 - Space complexity: `O(1)`
 ## Explanation
+- Create a dictionary `roman` that maps Roman characters to their integer values.
+    
+- Initialize `i = 0` to iterate through the string, `m = len(s)` as its length, and `total = 0` to store the result.
+    
+- Use a `while` loop to process each character:
+    
+    - Get the current symbol `val1 = s[i]`.
+        
+    - If `i` is not at the last character, set `val2 = s[i + 1]`; otherwise default `val2 = 'I'` (acts like a safe dummy).
+        
+    - Compare values:
+        - If `val1` is **greater than or equal to** `val2`, or we're at the last character:
+            - Add `roman[val1]` to `total` and move one step.
+                
+        - Else (means it's a subtractive pair like IV or IX):
+            
+            - Add `roman[val2] - roman[val1]` to `total` and move two steps.
+                
+- Return the total.
