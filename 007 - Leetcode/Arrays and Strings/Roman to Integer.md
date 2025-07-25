@@ -2,7 +2,7 @@
 
 Tags:  #Arrays-and-Strings #Hashmap [[Leetcode]]
 
-Status: #child 
+Status: #adult 
 
 **Description**: Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.
 
@@ -61,7 +61,6 @@ class Solution:
 - Initialize `i = 0` to iterate through the string, `m = len(s)` as its length, and `total = 0` to store the result.
     
 - Use a `while` loop to process each character:
-    
     - Get the current symbol `val1 = s[i]`.
         
     - If `i` is not at the last character, set `val2 = s[i + 1]`; otherwise default `val2 = 'I'` (acts like a safe dummy).
@@ -71,7 +70,6 @@ class Solution:
             - Add `roman[val1]` to `total` and move one step.
                 
         - Else (means it's a subtractive pair like IV or IX):
-            
             - Add `roman[val2] - roman[val1]` to `total` and move two steps.
                 
 - Return the total.

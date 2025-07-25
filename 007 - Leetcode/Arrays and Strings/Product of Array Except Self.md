@@ -32,3 +32,22 @@ class Solution:
 - Time complexity: `O(n)`
 - Space complexity: `O(n)`
 ## Explanation
+- Start by creating a result array `res` filled with `1`s (same length as `nums`).
+    
+- Initialize `prefix = 1` — this will hold the product of all numbers _before_ the current index.
+    
+- **First pass (left to right):**
+    
+    - For each index `i`, set `res[i] = prefix`.
+        
+    - Then update `prefix *= nums[i]` to include the current number.
+        
+- Initialize `postfix = 1` — holds the product of all numbers _after_ the current index.
+    
+- **Second pass (right to left):**
+    
+    - Multiply `res[i] *= postfix` to combine prefix and postfix products.
+        
+    - Then update `postfix *= nums[i]`.
+        
+- Return `res` — it now holds the product of all elements except `nums[i]`.
