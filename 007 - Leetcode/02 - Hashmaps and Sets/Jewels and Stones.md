@@ -1,10 +1,10 @@
-**Link**:
+**Link**: https://leetcode.com/problems/jewels-and-stones/description/
 
 Tags: #Leetcode 
 
-Status: #child
+Status: #adult
 
-**Description**: https://leetcode.com/problems/jewels-and-stones/description/
+**Description**:
 
 You're given strings `jewels` representing the types of stones that are jewels, and `stones` representing the stones you have. Each character in `stones` is a type of stone you have. You want to know how many of the stones you have are also jewels.
 
