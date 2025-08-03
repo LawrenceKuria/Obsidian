@@ -47,8 +47,8 @@ class Solution:
 ```
 ## Time and Space Complexity
 
-- Time complexity: 
-- Space complexity:
+- Time complexity: `O(n)`
+- Space complexity: `O(1)`
 ## Explanation
 - We create a map `mp` to count only the letters in `"balloon"`.
     
