@@ -35,9 +35,19 @@ You can use each character in `text` **at most once**. Return the maximum numb
 
 # Code
 
-
+```python
+class Solution:
+    def maxNumberOfBalloons(self, text: str) -> int:
+        mp = {'b': 0, 'a': 0, 'l': 0, 'o': 0, 'n': 0}
+        for letter in text:
+            if letter in mp:
+                mp[letter] += 1
+        
+        return min(mp["b"], mp["a"], mp["l"]//2, mp["o"]//2, mp["n"])
+```
 ## Time and Space Complexity
 
 - Time complexity:
 - Space complexity:
 ## Explanation
+
