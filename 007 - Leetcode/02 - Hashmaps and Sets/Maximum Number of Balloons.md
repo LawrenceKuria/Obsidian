@@ -47,7 +47,17 @@ class Solution:
 ```
 ## Time and Space Complexity
 
-- Time complexity:
+- Time complexity: 
 - Space complexity:
 ## Explanation
-
+- We create a map `mp` to count only the letters in `"balloon"`.
+    
+- Loop through each letter in `text`:
+    
+    - If it’s in `mp`, increment its count.
+        
+- `"l"` and `"o"` appear twice in `"balloon"`:
+    
+    - So divide their counts by `2` to see how many full pairs we have.
+        
+- The number of complete `"balloon"` words we can make is the smallest count among all letters (`min(...)`).
