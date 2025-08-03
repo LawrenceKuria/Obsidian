@@ -50,6 +50,15 @@ class Solution(object):
 ```
 ## Time and Space Complexity
 
-- Time complexity:
-- Space complexity:
+- Time complexity: `O(n)`
+- Space complexity: `O(n)`
 ## Explanation
+- Create `seen` dictionary to remember numbers we’ve visited and their indices.
+    
+- Loop through `nums` with index `i` and value `num`:
+    
+    - Compute `ideal` = `target - num` (the number we need).
+        
+    - If `ideal` is in `seen`, we’ve found the pair → return indices.
+        
+    - If not, store `num` with its index in `seen`.
