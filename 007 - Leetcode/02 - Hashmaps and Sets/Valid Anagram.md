@@ -2,7 +2,7 @@
 
 Tags: #Leetcode 
 
-Status: #child
+Status: #adult 
 
 **Description**:
 
@@ -40,3 +40,6 @@ return ''.join(sorted(s)) == ''.join(sorted(t))
 - Time complexity: `O(n log n)`
 - Space complexity: `O(1)`
 ## Explanation
+
+- Self explanatory, albeit inefficient.
+- More efficient method: Implement frequency hashmap.
