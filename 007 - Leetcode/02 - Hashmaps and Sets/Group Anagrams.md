@@ -38,8 +38,21 @@ Given an array of strings `strs`, group the anagrams together. You can return
 - `strs[i]` consists of lowercase English letters.
 
 # Code
+
+```python
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        ans = {}
+        for item in strs:
+            word = ''.join(sorted(item))
+            if word in ans:
+                ans[word].append(item)
+            else:
+                ans[word] = [item]
+        return list(ans.values())
+```
 ## Time and Space Complexity
 
-- Time complexity:
+- Time complexity: 
 - Space complexity:
 ## Explanation
