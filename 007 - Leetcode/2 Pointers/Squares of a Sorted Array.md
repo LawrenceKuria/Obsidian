@@ -2,7 +2,7 @@
 
 Tags: #Leetcode 
 
-Status: #child
+Status: #adult
 
 **Description**:
 Given an integer array `nums` sorted in **non-decreasing** order, return _an array of **the squares of each number** sorted in non-decreasing order_.
@@ -25,6 +25,8 @@ After sorting, it becomes [0,1,9,16,100].
 - `-104 <= nums[i] <= 104`
 - `nums` is sorted in **non-decreasing** order.
 # Code
+
+
 ## Time and Space Complexity
 
 - Time complexity:
