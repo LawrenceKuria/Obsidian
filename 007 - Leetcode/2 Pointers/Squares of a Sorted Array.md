@@ -26,9 +26,38 @@ After sorting, it becomes [0,1,9,16,100].
 - `nums` is sorted in **non-decreasing** order.
 # Code
 
-
+```python
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        left = 0
+        right = len(nums) - 1
+        result = []
+        
+        while left <= right:
+            if abs(nums[left]) < abs(nums[right]):
+                result.append(nums[right] ** 2)
+                right -= 1
+            else:
+                result.append(nums[left] ** 2)
+                left += 1
+        
+        result.reverse()
+        return result
+```
 ## Time and Space Complexity
 
-- Time complexity:
-- Space complexity:
+- Time complexity: `O(n)`
+- Space complexity: `O(n)`
 ## Explanation
+
+- Use **two pointers**: `left` (start) and `right` (end).
+    
+- Compare absolute values of both ends.
+    
+- Append the larger square to `result` (since larger abs value → larger square).
+    
+- Move the pointer that contributed the larger square.
+    
+- Repeat until all numbers processed.
+    
+- Reverse `result` at the end (we were adding largest to smallest).
