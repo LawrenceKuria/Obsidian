@@ -44,6 +44,14 @@ class Solution:
 ```
 ## Time and Space Complexity
 
-- Time complexity:
-- Space complexity:
+- Time complexity: `O(n)`
+- Space complexity: `O(1)`
 ## Explanation
+
+- Use **two pointers**: one at the start (`left`) and one at the end (`right`).
+    
+- Swap the characters at these positions.
+    
+- Move `left` forward and `right` backward after each swap.
+    
+- Continue until the pointers meet or cross → string is reversed **in-place**.
