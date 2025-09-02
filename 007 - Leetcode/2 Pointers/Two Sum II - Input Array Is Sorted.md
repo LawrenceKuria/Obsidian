@@ -36,6 +36,19 @@ Your solution must use only constant extra space.
 # Code
 ## Time and Space Complexity
 
-- Time complexity:
-- Space complexity:
+- Time complexity: `O(n)` — You only scan the array once with two pointers.
+- Space complexity: `O(1)` — No extra data structures; just a few variables.
 ## Explanation
+- Start with **two pointers**: `left` at the start, `right` at the end of the array.
+    
+- While `left < right`:
+    
+    - Add the two numbers: `numbers[left] + numbers[right]`.
+        
+    - If the sum is **equal** to the target → return `[left + 1, right + 1]` (since array is 1-indexed).
+        
+    - If the sum is **less than** the target → move `left` forward (need a bigger sum).
+        
+    - If the sum is **greater than** the target → move `right` backward (need a smaller sum).
+        
+- There's always exactly **one** valid solution, so you'll return before the loop ends.
